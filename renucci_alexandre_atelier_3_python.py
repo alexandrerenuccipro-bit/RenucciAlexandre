@@ -30,7 +30,7 @@ def full_name(str_arg:str)->str:
 
 # 2)
 
-def is_mail(str_arg:str)-> (int,int) :
+def is_mail(str_arg:str)-> (int,int) : # type: ignore
     """
         Retourne 1 si l'adresse mail est correcte et 0 sinon
 
