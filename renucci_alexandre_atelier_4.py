@@ -33,9 +33,11 @@ def mix_list(list_to_mix:list) -> list:
     Returns:
         list: La liste mélangée
     """
+    
     list_mixed = []
     for i in range(len(list_to_mix)):
-        list_mixed.append(list_to_mix.pop(randint(0,len(list_to_mix)-1)))
+        list_mixed.append(list_to_mix[randint(0, len(list_to_mix)-1)])
+        list_to_mix.remove(list_mixed[-1])
     return list_mixed
 
 #print(mix_list([1,2,3,4,7])) 
@@ -75,4 +77,4 @@ def extract_elements_list (list_in_which_to_choose:list, int_nbr_element_to_extr
         list_extracted.append(list_in_which_to_choose.pop(randint(0,len(list_in_which_to_choose)-1)))
     return list_extracted
 
-print(extract_elements_list([1,2,3,4,5,6,7,8,9,"fruit","légume","viande"],5))
+#print(extract_elements_list([1,2,3,4,5,6,7,8,9,"fruit","légume","viande"],5))
