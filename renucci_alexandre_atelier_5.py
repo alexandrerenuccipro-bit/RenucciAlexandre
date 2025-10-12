@@ -1,6 +1,60 @@
 import numpy as np
 
 #Partie 1 - Récursivité
+#Question 1
+
+def somme_recursive(liste:list) -> int:
+    """
+    Retourne la somme de la liste en recursivife
+    Args:
+        liste(list): La liste
+    Returns:
+        int: La somme de la liste
+    """
+    if len(liste) == 0:
+        return 0
+    else:
+        return liste[0] + somme_recursive(liste[1:])
+    
+#print(somme_recursive([1,2,3,4,6])) 
+
+###################################################################
+
+#Question 2
+
+def factorielle_recursive(n:int) -> int:
+    """
+    Retourne la factorielle de n en recursif
+    Args:
+        n(int): Le nombre
+    Returns:
+        int: La factorielle de n
+    """
+    if n == 0:
+        return 1
+    else:
+        return n * factorielle_recursive(n-1)
+
+#print(factorielle_recursive(5))
+
+###################################################################
+
+#Question 3
+
+def longueur_recursive(liste:list) -> int:
+    """
+    Retourne la longueur de la liste en recursif
+    Args:
+        liste(list): La liste
+    Returns:
+        int: La longueur de la liste
+    """
+    if liste == []:
+        return 0
+    else:
+        return 1 + longueur_recursive(liste[1:])
+    
+print(longueur_recursive([1,2,3,4,5,6,7,8,9]))
 
 ###################################################################
 

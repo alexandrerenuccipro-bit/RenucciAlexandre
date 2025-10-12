@@ -2,7 +2,7 @@ from random import *
 
 ###################################################################
 
-#Partie 
+#Partie 1
 #Exo 1
 
 def gen_list_random_int(int_binf=0, int_bsup=10-1, int_nbr=10) -> list:
@@ -78,3 +78,48 @@ def extract_elements_list (list_in_which_to_choose:list, int_nbr_element_to_extr
     return list_extracted
 
 #print(extract_elements_list([1,2,3,4,5,6,7,8,9,"fruit","légume","viande"],5))
+
+###################################################################
+
+#Partie 2.1
+#Exo 5
+
+###################################################################
+
+#Partie 2.2 
+#Exo 6 - Tri à votre mode
+#Question 1
+
+def sort_list(liste_el:list) -> list:
+    """
+    Trie une liste d'éléments.
+    Args:
+        liste_el (list): La liste à trier
+    Returns:
+        list: La liste triée
+    """          
+    pass
+
+###################################################################
+
+#Exo 7
+#Question 3
+
+def selection_sort(lst:list) -> list:
+    """tri par selection
+    Args:
+        lst_to_sort (list): list initial
+    Returns:
+        list: list trier
+    """
+    t = lst[:]
+    for i in range(len(t)-1):
+        m = i
+        for j in range(i+1,len(t)):
+            if t[j]<t[m]:
+                m = j
+        if m != i:
+            t[i], t[m] = t[m] , t[i]
+    return t
+
+print(selection_sort([5,3,60,2,10,1])) 
