@@ -54,7 +54,20 @@ def longueur_recursive(liste:list) -> int:
     else:
         return 1 + longueur_recursive(liste[1:])
     
-print(longueur_recursive([1,2,3,4,5,6,7,8,9]))
+#print(longueur_recursive([1,2,3,4,5,6,7,8,9]))
+
+###################################################################
+
+#Question 4
+"""#marche pas
+def min_recusif(liste:list) -> int:
+    i = liste[0]
+    j = liste[1]
+    if j <= i:
+        i = j
+    return min_recusif(liste[1:])
+
+print(min_recusif([5,9,2,8,7,4]))"""
 
 ###################################################################
 
